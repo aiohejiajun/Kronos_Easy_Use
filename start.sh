@@ -2,6 +2,6 @@
 pip3 install akshare --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install yfinance
 pip3 install gradio
-
+pip3 install matplotlib mplfinance
 # 2、启动app
 python3 app.py
