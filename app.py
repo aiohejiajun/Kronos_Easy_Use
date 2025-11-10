@@ -645,7 +645,7 @@ Volatility: {volatility:.1f}%'''
 
 
 class InferPipeline:
-    def __init__(self, model_key='kronos-small'):
+    def __init__(self, model_key='kronos-base'):
         try:
             device = 'cpu'
             model_config = AVAILABLE_MODELS[model_key]
@@ -753,7 +753,7 @@ def create_akshare_interface():
                 gr.Markdown("### 参数设置")
                 company_ticker = gr.Textbox(label="股票代码/名称", value="600519.SH", info="输入股票代码")
                 n_days = gr.Dropdown(label="历史周期", choices=["1d", "3d", "5d", "1wk", "1mo"], value="5d")
-                m_interval = gr.Dropdown(label="时间间隔", choices=["1m", "5m", "15m", "30m", "60m", "1d"], value="15m")
+                m_interval = gr.Dropdown(label="时间间隔", choices=["1m", "5m", "15m", "30m", "60m", "1d"], value="1m")
                 pred_len = gr.Slider(label="预测长度", minimum=1, maximum=50, value=10, step=1)
                 temperature = gr.Slider(label="温度参数", minimum=0.1, maximum=2.0, value=1.0, step=0.1)
                 top_p = gr.Slider(label="Top-p采样", minimum=0.1, maximum=1.0, value=0.9, step=0.1)
